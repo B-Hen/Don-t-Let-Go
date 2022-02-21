@@ -1,3 +1,12 @@
+//////////////////////////////////////////////////////
+//Developer: Breanna Henriquez 
+//Date: 02/20/2022
+//Purpose: To set up touch and get a better 
+//understanding of it in unity.
+//Edited by:
+//Edit Date:
+//////////////////////////////////////////////////////
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

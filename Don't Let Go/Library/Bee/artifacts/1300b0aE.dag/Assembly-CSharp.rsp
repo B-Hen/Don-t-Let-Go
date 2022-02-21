@@ -344,8 +344,12 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/VSSettingsProvider.ref.dll"
+"Assets/Scripts/BombExplosion.cs"
 "Assets/Scripts/DetectCollision.cs"
 "Assets/Scripts/DetectTouch.cs"
+"Assets/Scripts/SceneMngr.cs"
+"Assets/Scripts/SpawItems.cs"
+"Assets/Scripts/TouchManger.cs"
 -langversion:8.0
 
 /deterministic
