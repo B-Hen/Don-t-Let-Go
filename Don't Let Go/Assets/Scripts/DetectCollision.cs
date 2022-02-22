@@ -40,7 +40,9 @@ public class DetectCollision : MonoBehaviour
             SceneMngr.GetComponent<SceneMngr>().timer += 1.0f;
         }
         //if the player hits the bomb game over
-        if(collision.gameObject.tag == "Player" && gameObject.tag == "Bomb")
+        if(collision.gameObject.tag == "Player" && gameObject.tag == "Bomb" ||
+            collision.gameObject.tag == "Player" && gameObject.tag == "Spike" ||
+            collision.gameObject.tag == "Player" && gameObject.tag == "Bee")
         {
             SceneManager.LoadScene(1);
         }

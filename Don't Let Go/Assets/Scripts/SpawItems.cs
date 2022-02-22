@@ -15,7 +15,7 @@ public class SpawItems : MonoBehaviour
 {
     //gameobjects to create
     [SerializeField]
-    GameObject ball, bomb;
+    GameObject ball, bomb, spike, bee;
 
     //touch Manger
     GameObject touchManger;
@@ -29,12 +29,16 @@ public class SpawItems : MonoBehaviour
     //private timers
     float ballTimer;
     float bombTimer;
+    float spikeTimer;
+    float beeTimer;
 
     // Start is called before the first frame update
     void Start()
     {
         ballTimer = 0.5f; //Change this time later
         bombTimer = 1.0f;
+        spikeTimer = 3.0f;
+        beeTimer = 5.0f;
 
         touchManger = GameObject.Find("TouchManger");
     }
@@ -66,6 +70,32 @@ public class SpawItems : MonoBehaviour
 
             //reset the timer
             bombTimer = 1.0f;
+        }
+
+        //decrease the spike timer
+        spikeTimer -= Time.deltaTime;
+
+        //check to see if the spike timer has reached zerp
+        if(spikeTimer <= 0.0f)
+        {
+            //create a new instance of the spike object 
+            SpawnItem(spike);
+
+            //reset the timer
+            spikeTimer = 3.0f;
+        }
+
+        //count down the bee timer
+        beeTimer -= Time.deltaTime;
+
+        //check to see if the bee timer has reached zero
+        if(beeTimer <= 0.0f)
+        {
+            //create a new instance of the bee object
+            SpawnItem(bee);
+
+            //reset the timer
+            beeTimer = 5.0f;
         }
     }
 

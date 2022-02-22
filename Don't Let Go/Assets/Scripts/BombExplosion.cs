@@ -2,7 +2,7 @@
 //Developer: Breanna Henriquez 
 //Date: 02/21/2022
 //Purpose: Script to control when the 
-//bomb item explodes
+//bomb item explodes and it's behaviors
 //Edited by:
 //Edit Date:
 /////////////////////////////////////////

@@ -614,6 +614,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 2082680834584831470, guid: 4df7b34bdcc27354a9dd5222671173d2, type: 3}
   bomb: {fileID: 59559131770418783, guid: 6b3b77fb13409e04c9ebeca2fcc1ffc5, type: 3}
+  spike: {fileID: 286156480229343379, guid: b61a51faaae5f1e4c98375fcbba8249d, type: 3}
+  bee: {fileID: 1093968938773242786, guid: 64ad7c284d715ae44b910d0e46adf7e9, type: 3}
 --- !u!4 &2058215874
 Transform:
   m_ObjectHideFlags: 0
