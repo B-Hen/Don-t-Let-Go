@@ -20,21 +20,27 @@ public class TouchManger : MonoBehaviour
     float maxX = 1.90f;
     float maxY = 4.46f;
 
-    private Touch touch;
+    public Touch touch;
     private Vector3 touchPosition;
+
+    //bool
+    public bool startGame;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        startGame = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //check to see if the user has touch the screen if so begin the game
+        //check to see if the user has touch the screen 
         if (Input.touchCount > 0)
         {
+            //start the game
+            startGame = true;
+
             //get the touch struct 
             touch = Input.GetTouch(0);
 
@@ -51,8 +57,8 @@ public class TouchManger : MonoBehaviour
             else if (touchPosition.y > maxY) { touchPosition.y = maxY; }
 
             //movement of the touch
-            transform.position =  new Vector3(touchPosition.x, touchPosition.y, 0); //test to see if this way is better
-            //transform.position = Vector3.MoveTowards(transform.position, new Vector3(touchPosition.x, touchPosition.y, 0), Time.deltaTime * 100.0f);
+            //transform.position =  new Vector3(touchPosition.x, touchPosition.y, 0); //test to see if this way is better
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(touchPosition.x, touchPosition.y, 0), Time.deltaTime * 100.0f);
         }
     }
 }

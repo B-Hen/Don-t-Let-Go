@@ -20,7 +20,7 @@ public class SpikeEnlargement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spikeEnd = 3.5f;
+        spikeEnd = 2.5f;
     }
 
     // Update is called once per frame

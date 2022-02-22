@@ -19,7 +19,7 @@ public class BombExplosion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        explosionTimer = 2.5f;
+        explosionTimer = 1.5f;
     }
 
     // Update is called once per frame

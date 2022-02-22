@@ -35,7 +35,6 @@ public class DetectCollision : MonoBehaviour
         //if the player hits a ball add to there total time left
         if (collision.gameObject.tag == "Player" && gameObject.tag == "Ball")
         {
-            Debug.Log("Collision");
             Destroy(gameObject);
             SceneMngr.GetComponent<SceneMngr>().timer += 1.0f;
         }
