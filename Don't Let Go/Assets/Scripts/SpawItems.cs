@@ -3,8 +3,9 @@
 //Date: 02/20/2022
 //Purpose: Spawner to spawn different objects
 //into the game
-//Edited by:
-//Edit Date:
+//Edited by: Breanna Henriquez 
+//Edit Date: 02/22/2022
+//Edit Purpose: To make spawn rates expoential
 ////////////////////////////////////////////////
 
 using System.Collections;
@@ -27,18 +28,25 @@ public class SpawItems : MonoBehaviour
     float maxY = 3.76f;
 
     //private timers
-    float ballTimer;
-    float bombTimer;
-    float spikeTimer;
-    float beeTimer;
+    float ballTimer, ballBase;
+    float bombTimer, bombBase;
+    float spikeTimer, spikeBase;
+    float beeTimer, beeBase;
 
     // Start is called before the first frame update
     void Start()
     {
-        ballTimer = 0.5f; //Change this time later
-        bombTimer = 1.0f;
-        spikeTimer = 3.0f;
-        beeTimer = 5.0f;
+        //change values until it feels right 
+        ballTimer = 0.1f; 
+        bombTimer = 3.0f;
+        spikeTimer = 5.0f;
+        beeTimer = 12.0f;
+
+        //baseTimer numbers
+        ballBase = ballTimer;
+        bombBase = bombTimer;
+        spikeBase = spikeTimer;
+        beeBase = beeTimer;
 
         touchManger = GameObject.Find("TouchManger");
     }
@@ -55,8 +63,14 @@ public class SpawItems : MonoBehaviour
             //create a new instance of the ball object
             SpawnItem(ball);
 
-            //reset timer
-            ballTimer = 0.5f;
+            //reset timer (exponential increaase) make it so it does spawn as much will the game goes on
+            ballTimer = ballBase + (Mathf.Pow(ballBase, 1/25f) / 25);
+
+            //reset the base as well
+            ballBase = ballTimer;
+
+            //cap the timer
+            if(ballTimer >= 0.8f) { ballTimer = 0.8f; ballBase = 10.8f; }
         }
 
         //count down the bomb timer
@@ -68,8 +82,14 @@ public class SpawItems : MonoBehaviour
             //create a new instance of the bomb object
             SpawnItem(bomb);
 
-            //reset the timer
-            bombTimer = 1.0f;
+            //reset the timer (expontential decrease)
+            bombTimer = bombBase - Mathf.Pow(bombBase, -2f);
+
+            //reset the base as well
+            bombBase = bombTimer;
+
+            //make it so that the timer can't just spawn instantly
+            if(bombTimer <= 0.5f) { bombTimer = 0.5f; bombBase = 0.5f; }
         }
 
         //decrease the spike timer
@@ -81,8 +101,14 @@ public class SpawItems : MonoBehaviour
             //create a new instance of the spike object 
             SpawnItem(spike);
 
-            //reset the timer
-            spikeTimer = 3.0f;
+            //reset the timer (expontential decrease)
+            spikeTimer = spikeBase - Mathf.Pow(spikeBase, -4f);
+
+            //reset the base as well
+            spikeBase = spikeTimer;
+
+            //make it so that the timer can't just spawn instantly
+            if(spikeTimer <= 0.5f) { spikeTimer = 0.5f; spikeBase = 0.5f; }
         }
 
         //count down the bee timer
@@ -94,8 +120,14 @@ public class SpawItems : MonoBehaviour
             //create a new instance of the bee object
             SpawnItem(bee);
 
-            //reset the timer
-            beeTimer = 5.0f;
+            //reset the timer (expontential decrease)
+            beeTimer = beeBase - Mathf.Pow(beeBase, -6f);
+
+            //reset the base as well
+            beeBase = beeTimer;
+
+            //make it so that the timer can't just spawn instantly
+            if(beeTimer <= 0.5f) { beeTimer = 0.5f; beeBase = 0.5f; }
         }
     }
 
