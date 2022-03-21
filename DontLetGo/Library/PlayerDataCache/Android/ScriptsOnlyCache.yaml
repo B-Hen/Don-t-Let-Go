@@ -13,19 +13,14 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
-    Unity.Mobile.AndroidLogcat.Editor.dll:
-    - Unity.Android.Logcat.AndroidLogcatManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -65,25 +60,25 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1594}
+      Script: {instanceID: 1586}
     - Class: 114
-      Script: {instanceID: 2742}
+      Script: {instanceID: 2734}
     - Class: 114
-      Script: {instanceID: 2772}
+      Script: {instanceID: 2764}
     - Class: 114
-      Script: {instanceID: 3012}
+      Script: {instanceID: 3004}
     - Class: 114
-      Script: {instanceID: 3326}
+      Script: {instanceID: 3318}
     - Class: 114
-      Script: {instanceID: 5674}
+      Script: {instanceID: 5666}
     - Class: 114
-      Script: {instanceID: 5986}
+      Script: {instanceID: 5978}
     - Class: 114
-      Script: {instanceID: 6336}
+      Script: {instanceID: 6328}
     - Class: 114
-      Script: {instanceID: 6522}
+      Script: {instanceID: 6514}
     - Class: 114
-      Script: {instanceID: 6908}
+      Script: {instanceID: 6900}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -124,37 +119,37 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1858}
+      Script: {instanceID: 1850}
     - Class: 114
-      Script: {instanceID: 2262}
+      Script: {instanceID: 2254}
     - Class: 114
-      Script: {instanceID: 2772}
+      Script: {instanceID: 2764}
     - Class: 114
-      Script: {instanceID: 3012}
+      Script: {instanceID: 3004}
     - Class: 114
-      Script: {instanceID: 3732}
+      Script: {instanceID: 3724}
     - Class: 114
-      Script: {instanceID: 4184}
+      Script: {instanceID: 4176}
     - Class: 114
-      Script: {instanceID: 4534}
+      Script: {instanceID: 4526}
     - Class: 114
-      Script: {instanceID: 4842}
+      Script: {instanceID: 4834}
     - Class: 114
-      Script: {instanceID: 5466}
+      Script: {instanceID: 5458}
     - Class: 114
-      Script: {instanceID: 5658}
+      Script: {instanceID: 5650}
     - Class: 114
-      Script: {instanceID: 5674}
+      Script: {instanceID: 5666}
     - Class: 114
-      Script: {instanceID: 5794}
+      Script: {instanceID: 5786}
     - Class: 114
-      Script: {instanceID: 6336}
+      Script: {instanceID: 6328}
     - Class: 114
-      Script: {instanceID: 6522}
+      Script: {instanceID: 6514}
     - Class: 114
-      Script: {instanceID: 6908}
+      Script: {instanceID: 6900}
     - Class: 114
-      Script: {instanceID: 8898}
+      Script: {instanceID: 8890}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1132,4 +1127,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/mainGame.unity
   - Assets/Scenes/gameOver.unity
-  playerPath: C:/Users/brean/Documents/Don-t-Let-Go/DontLetGo/test.apk
+  playerPath: C:/Users/brean/Documents/Don-t-Let-Go/DontLetGo/DontLetGo.apk

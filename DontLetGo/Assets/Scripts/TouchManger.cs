@@ -15,10 +15,10 @@ using UnityEngine.SceneManagement;
 public class TouchManger : MonoBehaviour
 {
     //private floats
-    float minX = -1.90f;
-    float minY = -4.46f;
-    float maxX = 1.90f;
-    float maxY = 4.46f;
+    float minX = -2.48f;
+    float minY = -4.53f;
+    float maxX = 2.48f;
+    float maxY = 3.61f;
 
     public Touch touch;
     private Vector3 touchPosition;
